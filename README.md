@@ -56,3 +56,45 @@ hotkey를 이용하여 두 개의 키를 동시에 누를 수 있습니다. [Ctr
 pyautogui.screenshot('저장경로', region=(100, 100, 50,50))
 screenshot을 이용하여 부분 캡쳐를 할 수 있습니다. region=(x좌표, y좌표, 가로 사이즈, 세로 사이즈)입니다.
 ```
+
+# 웹페이지 자동화 
+``` PYTHON
+import pyautogui
+import time
+import pyperclip
+
+pyautogui.moveTo(1110, 50,0,2)
+pyautogui.click()
+time.sleep(0.5)
+
+pyperclip.copy("roblox.com")
+pyautogui.hotkey("ctrl", "v")
+time.sleep(0.5)
+
+pyautogui.write(["enter"])
+time.sleep(1)
+```
+# 자동 캡쳐 후 저장
+``` PYTHON
+import pyautogui
+import time
+import pyperclip
+
+pyautogui.moveTo(1241, 206, 0, 2)
+pyautogui.click()
+time.sleep(0.5)
+
+pyperclip.copy("인천 날씨")
+pyautogui.hotkey("ctrl", "v")
+time.sleep(0.5)
+
+pyautogui.write(["enter"])
+time.sleep(1)
+
+start_x = 992
+start_y = 220
+end_x = 1656
+end_y = 635
+
+pyautogui.screenshot('인천날씨.png', region=(start_x, start_y, end_x-start_x, end_y-start_y))
+```
