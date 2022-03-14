@@ -5,6 +5,7 @@
 -라이브러리 설치
 pip install pyautogui
 pip install pyperclip
+pip install schedule
 
 import pyautogui
 import time
@@ -176,3 +177,18 @@ for 지역날씨 in 날씨:
     pyautogui.screenshot(save, region=(start_x, start_y, end_x-start_x, end_y-start_y))
 ```
 
+## 사진의 좌표를 알려주는 코드
+``` PYTHON
+import pyautogui
+
+picPosition = pyautogui.locateOnScreen("testtest\picture.png")
+print(picPosition)
+
+if picPosition is None:
+    picPosition = pyautogui.locateOnScreen("testtest\picture1.png")
+    print(picPosition)
+
+if picPosition is None:
+    picPosition = pyautogui.locateOnScreen("testtest\picture2.png")
+    print(picPosition)
+```
