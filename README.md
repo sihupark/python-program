@@ -58,6 +58,17 @@ pyautogui.screenshot('저장경로', region=(100, 100, 50,50))
 screenshot을 이용하여 부분 캡쳐를 할 수 있습니다. region=(x좌표, y좌표, 가로 사이즈, 세로 사이즈)입니다.
 ```
 
+# python
+```
+schedule
+- 명령어가 직관적으로 알아볼 수 있어서 사용에 용이
+- 설정이 복잡해질 경우 사용여부를 고려
+
+apscheduler
+- Cron 방식 - Cron 표현식으로 수행
+- Date 방식 - 특정 날짜에 수행
+- Interval 방식 - 일정 주기로 수행
+```
 # 웹페이지 자동화 
 ``` PYTHON
 import pyautogui
@@ -161,9 +172,9 @@ end_y = 635
 
 for 지역날씨 in 날씨:
     pyautogui.moveTo(addr_x, addr_y, 1)
-    time.sleep(0.2)
+    time.sleep(0.5)
     pyautogui.click()
-    time.sleep(0.2)
+    time.sleep(0.5)
     pyautogui.write(" www.naver.com", interval=0.1)
     pyautogui.write(["enter"])
     time.sleep(1)
@@ -175,6 +186,9 @@ for 지역날씨 in 날씨:
     time.sleep(1)
     save = 지역날씨 + '.png'
     pyautogui.screenshot(save, region=(start_x, start_y, end_x-start_x, end_y-start_y))
+
+* save = "weather\\" + 지역날씨 + '.png'
+weather이라는 파일을 만들면 거기로 사진을 저장한다.
 ```
 
 ## 사진의 좌표를 알려주는 코드
@@ -192,3 +206,7 @@ if picPosition is None:
     picPosition = pyautogui.locateOnScreen("testtest\picture2.png")
     print(picPosition)
 ```
+
+## youtube검색 및 사진 캡쳐후 저장
+``` PYTHON
+
