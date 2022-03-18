@@ -215,3 +215,47 @@ if picPosition is None:
 
 ## youtube검색 및 사진 캡쳐후 저장
 ``` PYTHON
+
+import pyautogui
+import time 
+import pyperclip
+
+검색 = [" python, pyautogui가 python에 깔리지 않을때", "심해", "python", "프로그램 만들기", "JAVA"]
+
+pyautogui.hotkey("alt", "tab")
+addr_x = 1145
+addr_y = 54
+start_x = 1055
+start_y = 366
+end_x = 1887
+end_y = 882
+
+for 유튜브검색 in 검색:
+    pyautogui.moveTo(addr_x, addr_y, 1)
+    time.sleep(0.5)
+    pyautogui.click()
+    time.sleep(0.5)
+    pyautogui.write("youtube.com", interval = 0.1)
+    pyautogui.write(["enter"])
+    time.sleep(5)
+    pyautogui.moveTo(1229, 106)
+    pyautogui.click()
+    time.sleep(5)
+
+    pyperclip.copy(유튜브검색)
+    pyautogui.hotkey("ctrl", "v")
+    time.sleep(5)
+    pyautogui.write(["enter"])
+    time.sleep(2)
+    save = "youtube\\ " + 유튜브검색 + '.png'
+    pyautogui.screenshot(save, region = (start_x, start_y, end_x-start_x, end_y-start_y))
+
+pyautogui.moveTo(1630, 29)
+time.sleep(1)
+pyautogui.click()
+pyautogui.hotkey("alt", "tab")
+time.sleep(1)
+pyautogui.moveTo(1035, 49)
+time.sleep(0.5)
+pyautogui.click()
+```
