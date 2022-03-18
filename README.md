@@ -207,6 +207,11 @@ if picPosition is None:
     print(picPosition)
 ```
 
+## pyautogui 설치 
+```
+환경 변수 들어가기
+환경 변수 클릭 - 시스템 변수(path) 편집 - 새로 만들기 - 찾아보기 - 내 PC - 로컬 디스크 - 사용자 - S10 - AppData - Local - Programs - Python - Scripts
+```
+
 ## youtube검색 및 사진 캡쳐후 저장
 ``` PYTHON
-
