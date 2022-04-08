@@ -259,3 +259,27 @@ pyautogui.moveTo(1035, 49)
 time.sleep(0.5)
 pyautogui.click()
 ```
+
+## python use
+
+cmd에 들어가서 
+```
+import gtts
+import playsound
+```
+설치
+
+IDLE Shell에서 새 폴더 만들고 쓴다
+```PYTHON
+from gtts import gTTS
+from playsound import playsound
+import time
+
+file_path = r'test.txt'
+with open(file_path, 'rt', encoding = 'UTF8')as f:
+    rea_file = f.read()
+    
+tts = gTTS(text = read_file, lang='ko')
+tts.save(r"./hi.mp3")
+```
+를 쓴다.
