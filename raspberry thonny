@@ -44,3 +44,32 @@ alphabet = ['a', 'b', 'c']
 collaboration = [numbers, alphabet]
 print(collaboration[1])
 ```
+
+## 함수
+```
+def fibonacci(num):
+    a, b = 0, 1
+    while a < num:
+        print(a)
+	a, b = b, a+b
+    print('end')
+fibonacci(10)
+```
+vim hamsu1.py
+```
+inStr = input("숫자열을 입력하시오 :")
+print("")
+
+for idxStr in range(0, len(inStr)):
+    ch = inStr[idxStr]
+    numDollar = int(ch)
+    strDollar = ""
+    for idxDollar in range(0, numDollar):
+        strDollar += "$"
+    print(numDollar, ":", strDollar)
+```
+
+```
+~$ vim hamsu.py
+~$ python3 hamsu.py
+```
