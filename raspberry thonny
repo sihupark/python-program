@@ -1,0 +1,17 @@
+## random game
+```
+import random
+random_num = random.randint(1, 100)
+game_count = 1
+
+while True:
+		guess_num = int(input("guess the number:"))
+		if random_num > guess_num:
+				print("up")
+		elif random_num < guess_num:
+				print("down")
+		else:
+				print("same")
+				print(game_count)
+		game_count += 1
+```
